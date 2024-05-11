@@ -1,7 +1,8 @@
-var http = require('http');
-
-//create a server object:
-http.createServer(function (req, res) {
-  res.write('** Welcome to GlobalLogic!!!! **'); //write a response to the client
-  res.end(); //end the response
-}).listen(80); //the server object listens on port 80
+var express = require('express');
+var app = express();
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!');
+});
